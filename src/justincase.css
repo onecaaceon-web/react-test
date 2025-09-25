@@ -1,0 +1,373 @@
+/* ==========================================
+   响应式设计 (Responsive Design)
+   ========================================== */
+
+/* 响应式设计 - 平板设备 */
+@media screen and (max-width: 1024px) {
+  .home-container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  
+  .left-section, .right-section {
+    width: 90%;
+    margin: 4px auto;
+    min-height: 30vh;
+  }
+  
+  .section-content {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* 烈士页面响应式调整 */
+  .martyrs-container {
+    flex-direction: column;
+    padding: 20px 10px;
+    gap: 20px;
+  }
+  
+  .rectangle-container {
+    width: 90%;
+    height: 200px;
+  }
+  
+  .right-subdiv {
+    font-size: 50px;
+  }
+  
+  /* 留言页面响应式调整 */
+  .comments-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 150px 0 20px 0;
+  }
+  
+  .comment-card {
+    min-height: 100px;
+    padding: 12px;
+    font-size: 0.7rem;
+  }
+  
+  /* 烈士信息页面响应式调整 */
+  .martyr-info-container {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .martyr-image-container {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  
+  .martyr-info-content {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .martyr-actions {
+    position: relative;
+    bottom: auto;
+    margin-top: 20px;
+    gap: 20px;
+  }
+  
+  .blank-button {
+    padding: 12px 80px;
+    font-size: 16px;
+    width: 100px;
+    height: 35px;
+  }
+}
+
+
+/* 响应式设计 - 手机设备 */
+@media screen and (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  
+  .left-section, .right-section {
+    width: 95%;
+    height: 45vh;
+    margin: 2px auto;
+    min-height: 35vh;
+  }
+  
+  .section-content {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* 烈士页面响应式调整 */
+  .martyrs-container {
+    flex-direction: column;
+    padding: 10px 5px;
+    gap: 15px;
+  }
+  
+  .rectangle-container {
+    width: 95%;
+    height: 180px;
+  }
+  
+  .right-subdiv {
+    font-size: 40px;
+  }
+  
+  /* 留言页面响应式调整 */
+  .comments-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 100px 0 15px 0;
+  }
+  
+  .comment-card {
+    min-height: 90px;
+    padding: 10px;
+    font-size: 0.6rem;
+  }
+  
+  .comments-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .add-comment-button {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+  
+  /* 烈士信息页面响应式调整 */
+  .martyr-info-container {
+    flex-direction: column;
+    height: auto;
+    margin-top: 40px;
+  }
+  
+  .martyr-image-container {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 15px;
+  }
+  
+  .martyr-info-content {
+    width: 100%;
+    margin-left: 0;
+    padding: 15px;
+  }
+  
+  .martyr-name {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  
+  .martyr-bio {
+    font-size: 16px;
+  }
+  
+  .martyr-actions {
+    position: relative;
+    bottom: auto;
+    margin-top: 15px;
+    gap: 15px;
+  }
+  
+  .blank-button {
+    padding: 10px 60px;
+    font-size: 14px;
+    width: 80px;
+    height: 30px;
+  }
+  
+  /* 问题词条响应式调整 */
+  .questions-container {
+    width: 95%;
+    height: auto;
+    min-height: 400px;
+  }
+  
+  .questions-grid {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .questions-column {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .question-button {
+    padding: 10px 12px;
+    font-size: 12px;
+    margin: 5px;
+    background-clip: content-box; /* 背景只应用到内容区域，不包括padding */
+  }
+  
+  /* 表单容器响应式调整 */
+  .comment-form-container {
+    width: 95%;
+    padding: 20px;
+  }
+  
+  .comment-input-div {
+    min-height: 60px;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* 响应式设计 - 小屏幕手机 */
+@media screen and (max-width: 480px) {
+  .home-container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  
+  .left-section, .right-section {
+    width: 98%;
+    height: 40vh;
+    margin: 1.2px auto;
+    min-height: 30vh;
+  }
+  
+  .section-content {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* 烈士页面响应式调整 */
+  .martyrs-container {
+    flex-direction: column;
+    padding: 5px 2px;
+    gap: 10px;
+  }
+  
+  .rectangle-container {
+    width: 98%;
+    height: 30%;
+  }
+  
+  .right-subdiv {
+    font-size: 30px;
+  }
+  
+  /* 留言页面响应式调整 */
+  .comments-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 80px 0 10px 0;
+  }
+  
+  .comment-card {
+    min-height: 80px;
+    padding: 8px;
+    font-size: 0.5rem;
+  }
+  
+  .comments-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  
+  .add-comment-button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+  
+  /* 烈士信息页面响应式调整 */
+  .martyr-info-container {
+    flex-direction: column;
+    height: auto;
+    margin-top: 30px;
+  }
+  
+  .martyr-image-container {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+  }
+  
+  .martyr-info-content {
+    width: 100%;
+    margin-left: 0;
+    padding: 10px;
+  }
+  
+  .martyr-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .martyr-bio {
+    font-size: 14px;
+  }
+  
+  .martyr-actions {
+    position: relative;
+    bottom: auto;
+    margin-top: 10px;
+    gap: 10px;
+  }
+  
+  .blank-button {
+    padding: 8px 40px;
+    font-size: 12px;
+    width: 60px;
+    height: 25px;
+  }
+  
+  /* 问题词条响应式调整 */
+  .questions-container {
+    width: 98%;
+    height: auto;
+    min-height: 350px;
+  }
+  
+  .questions-grid {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .questions-column {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  
+  .question-button {
+    padding: 8px 10px;
+    font-size: 11px;
+    margin: 3px;
+    background-clip: content-box; /* 背景只应用到内容区域，不包括padding */
+  }
+  
+  /* 表单容器响应式调整 */
+  .comment-form-container {
+    width: 98%;
+    padding: 15px;
+  }
+  
+  
+  
+  .comment-input-div {
+    min-height: 40px;
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+  
+  .submit-button, .cancel-button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+  
+  /* 返回按钮调整 */
+  .back-button {
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+  }
+}
