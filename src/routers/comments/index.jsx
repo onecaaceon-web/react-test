@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './App.css';
+import '../../App.css';
 
 function CommentsPage() {
   const navigate = useNavigate();
@@ -33,7 +33,6 @@ function CommentsPage() {
     'crap', 'piss', 'dick', 'cock', 'cunt', 'faggot', 'bullshit',
     'dumb', 'idiot', 'stupid', 'moron', 'retard', 'loser',
     'hell', 'suck', 'sucker', 'gay', 'damn it', 'wtf', 'wth',
-    // 可以继续添加更多词汇
   ];
 
   // 检查留言是否包含辱骂词汇
@@ -53,20 +52,18 @@ function CommentsPage() {
 
   const handleAddComment = () => {
     setShowCommentForm(true);
-    setShowBackButton(false); // 隐藏返回按钮
-    setErrorMessage(''); // 清除之前的错误信息
+    setShowBackButton(false); 
+    setErrorMessage(''); 
   };
 
   const handleSubmitComment = () => {
-    // 检查留言是否为空
+
     if (newComment.trim() === '') {
       setErrorMessage('留言内容不能为空');
-      setShowCommentForm(false); // 隐藏留言表单
-      setShowBackButton(true); // 显示返回按钮
+      setShowCommentForm(false);
       return;
     }
 
-    // 检查留言是否包含辱骂词汇
     if (containsBannedWords(newComment)) {
       setErrorMessage('留言包含不适当的内容，请修改后重新提交');
       setShowBackButton(true); // 显示返回按钮
@@ -74,11 +71,11 @@ function CommentsPage() {
     }
 
     // 如果通过审核，添加留言
-    setComments([newComment, ...comments.slice(0, 8)]); // 添加新留言并保持最多9个
+    setComments([newComment, ...comments.slice(0, 8)]); // 最多9个！！！！！！
     setNewComment('');
     setErrorMessage('');
     setShowCommentForm(false);
-    setShowBackButton(true); // 显示返回按钮
+    setShowBackButton(true); 
   };
 
   const handleCancelComment = () => {
@@ -109,7 +106,7 @@ function CommentsPage() {
       {showCommentForm && (
         <div className="overlay">
           <div className="comment-form-container">
-            <div
+            <textarea
               className="comment-input-div"
               contentEditable
               onInput={(e) => setNewComment(e.target.textContent)}

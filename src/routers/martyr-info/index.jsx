@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import './App.css';
+import '../../App.css';
 
 function MartyrInfoPage() {
   const navigate = useNavigate();
@@ -141,13 +141,13 @@ function MartyrInfoPage() {
         <div className="overlay" onClick={closeVideo}>
           <div className="video-container" onClick={(e) => e.stopPropagation()}>
             <video 
-              ref={videoRef}
-              src="/src/assets/backgrounds/vid.mp4" 
-              controls 
-              autoPlay 
-              style={{ width: '100vw', height: '100vh', objectFit: 'cover' }}
-              onEnded={closeVideo}
-            />
+          ref={videoRef}
+          src="/video/vid.mp4" 
+          controls 
+          autoPlay 
+          style={{ width: '100vw', height: '100vh', objectFit: 'cover' }}
+          onEnded={closeVideo}
+        />
             <button className="close-video-button" onClick={closeVideo}>✕</button>
           </div>
         </div>

@@ -1,0 +1,46 @@
+/* HomePage specific styles */
+.home-container {
+  display: flex;
+  height: 100vh;
+  background-image: url('/IMG/pagebackgrounds/BackGroundOne.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.left-section {
+  flex: 1;
+  background-image: url('/IMG/pagebackgrounds/DivBackground.png');
+  background-size: 115%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 16px;
+  transform: translateX(15%);
+  min-height: 200px;
+  box-sizing: border-box;
+}
+
+.right-section {
+  flex: 1;
+  background-image: url('/IMG/pagebackgrounds/dibbackgroundtwo.png');
+  background-size: 115%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 16px;
+  transform: translateX(-15%);
+  min-height: 200px;
+  box-sizing: border-box;
+}
+
+.section-content {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}

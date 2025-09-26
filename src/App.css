@@ -22,7 +22,7 @@ div {
   height: 5%;
   border: none;
   background-color: transparent;
-  background-image: url("D:\HEHE\YEEXUN\monor\src\assets\backgrounds\back.png");
+  background-image: url("/IMG/elements/back.png");
   background-size: 100% 100%;
   cursor: pointer;
   z-index: 1002; /* 确保返回按钮在所有覆盖层之上 */
@@ -53,7 +53,7 @@ div {
   display: flex;
   width: 100vw;
   height: 100vh;
-  background-image: url('./assets/backgrounds/BackGroundOne.jpg');
+  background-image: url('/IMG/pagebackgrounds/BackGroundOne.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -68,7 +68,7 @@ div {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('./assets/backgrounds/DivBackground.png');
+  background-image: url('/IMG/pagebackgrounds/DivBackground.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -80,9 +80,9 @@ div {
   box-shadow: none;
   transition: none;
   transform: translateX(15%);
-  min-width: 0; /* 防止flex项目溢出 */
+  min-width: 0; /* 防溢出之前就溢出了 */
   box-sizing: border-box;
-  min-height: 200px; /* 设置最小高度 */
+  min-height: 200px; 
 }
 
 /* 右侧留言区域样式 */
@@ -91,7 +91,7 @@ div {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('./assets/backgrounds/dibbackgroundtwo.png');
+  background-image: url('/IMG/pagebackgrounds/dibbackgroundtwo.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -103,9 +103,9 @@ div {
   box-shadow: none;
   transition: none;
   transform: translateX(-15%);
-  min-width: 0; /* 防止flex项目溢出 */
+  min-width: 0; /* 防溢出 */
   box-sizing: border-box;
-  min-height: 200px; /* 设置最小高度 */
+  min-height: 200px; 
 }
 
 /* 内容区域样式 */
@@ -124,7 +124,7 @@ div {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-image: url('./assets/backgrounds/BackGroundTwo.jpg');
+  background-image: url('/IMG/pagebackgrounds/BackGroundTwo.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -147,7 +147,7 @@ div {
 .martyr-card {
   width: 30%;
   height: calc(100vh / 3);
-  background-image: url('./assets/backgrounds/divpic.png');
+  background-image: url('/IMG/pagebackgrounds/divpic.png');
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -184,7 +184,7 @@ div {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-image: url('./assets/backgrounds/BackGroundTwo.jpg');
+  background-image: url('/IMG/pagebackgrounds/BackGroundTwo.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -217,7 +217,7 @@ div {
 .martyr-image {
   width: 100%;
   height: 100%;
-  background-image: url('./assets/backgrounds/HeroPic.png');
+  background-image: url('/IMG/heropic/HeroPic.png');
   background-size: contain;
   background-size: 110%;
   background-position: top;
@@ -250,7 +250,7 @@ div {
 .martyr-name-container {
   width: 100%;
   height: 100%;
-  background-image: url('./assets/backgrounds/namedivpic.png');
+  background-image: url('/IMG/pagebackgrounds/namedivpic.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left center;
@@ -346,7 +346,7 @@ div {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-image: url('./assets/backgrounds/BackGroundThree.jpg');
+  background-image: url('/IMG/pagebackgrounds/BackGroundThree.jpg');
   background-size: cover;
   background-position: left;
   background-repeat: no-repeat;
@@ -402,7 +402,7 @@ div {
   width: 28vw;
   display: block;
   margin: 0 auto;
-  background-image: url('./assets/backgrounds/commenbutton.png');
+  background-image: url('/IMG/buttonpic/commenbutton.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -461,7 +461,7 @@ div {
   cursor: pointer;
   transition: none;
   margin: 0 5px 10px 5px; 
-  background-image: url('./assets/backgrounds/sendbutton.png');
+  background-image: url('/IMG/buttonpic/sendbutton.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -487,8 +487,8 @@ div {
   font-size: 1rem;
   cursor: pointer;
   transition: none;
-  margin: 0 5px; /* 调整边距 */
-  background-image: url('./assets/backgrounds/commenbutton.png');
+  margin: 0 5px; 
+  background-image: url('/IMG/buttonpic/commenbutton.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -532,7 +532,7 @@ div {
   flex:0.2;
   width: 30vw;
   height: 20vh;
-  background-image: url('./assets/backgrounds/question button.png');
+  background-image: url('/IMG/buttonpic/question button.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -544,7 +544,7 @@ div {
   flex:0.2;
   width: 30vw;
   height: 20vh;
-  background-image: url('./assets/backgrounds/flower button.png');
+  background-image: url('/IMG/buttonpic/flower button.png');
   background-size: 100%;
   transform: translate(10%,20%);
 }
@@ -593,22 +593,22 @@ div {
   width: 20%;
   background: linear-gradient(rgba(128, 128, 128, 0.3), rgba(126, 61, 37, 0.62)); /* 灰色到土色渐变半透明 */
   color: white;
-  border: 5px solid #f7a45788; /* 浅土色边框 */
-  border-radius: 0; /* 尖锐边框 */
-  padding: 5px 4px; /* 原始padding值 */
-  margin: 15px; /* 增大按钮之间的距离 */
-  font-size: 20px;
-  font-weight: bold; /* 加粗字体 */
-  text-align: left; /* 内容靠左对齐 */
+  border: 5px solid #f7a45788; 
+  border-radius: 0; 
+  padding: 5px 4px; 
+  margin: 15px; 
+  font-size: 2vh;
+  font-weight: bold; 
+  text-align: left; 
   cursor: pointer;
   transition: all 0.3s ease;
-  width: calc(100% - 30px); /* 调整宽度以适应增大的margin */
+  width: calc(100% - 30px);
   box-sizing: border-box;
-  background-clip: content-box; /* 背景只应用到内容区域，不包括padding */
+  background-clip: content-box; 
 }
 
 .question-button:hover {
-  background: linear-gradient(rgba(128, 128, 128, 0.5), rgba(126, 61, 37, 0.5)); /* 悬停时加深渐变 */
+  background: linear-gradient(rgba(128, 128, 128, 0.5), rgba(126, 61, 37, 0.5)); 
   transform: none;
   box-shadow: none;
 }
@@ -641,7 +641,7 @@ div {
   opacity: 1;
   z-index: 1001;
   animation: flowerShake 1s infinite;
-  background-image: url('./assets/backgrounds/flower.png');
+  background-image: url('/IMG/elements/flower.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
