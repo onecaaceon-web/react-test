@@ -1,39 +1,17 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../App.css';
+import { bannedWords, comments as initialComments } from '../../data/data';
+import CommentCard from './CommentCard';
+import CommentForm from './CommentForm';
 
 function CommentsPage() {
   const navigate = useNavigate();
+  const [comments, setComments] = useState(() => [...initialComments]);
   const [showCommentForm, setShowCommentForm] = useState(false);
   const [showBackButton, setShowBackButton] = useState(true);
-  const [comments, setComments] = useState([
-    "缅怀先烈，铭记历史。",
-    "英雄永垂不朽！",
-    "向烈士致敬！",
-    "他们的牺牲换来了我们的幸福生活。",
-    "不忘初心，牢记使命。",
-    "烈士精神永远激励我们前进。",
-    "感谢先烈们的无私奉献。",
-    "传承红色基因，弘扬革命精神。",
-    "让我们一起为烈士们献上最崇高的敬意。"
-  ]);
   const [newComment, setNewComment] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-
-  // 定义辱骂词汇列表（中英文）
-  const bannedWords = [
-    // 中文辱骂词汇
-    '傻逼', 'sb', 'SB', '傻b', '煞笔', '沙比', '啥比', '傻比',
-    '操', '草', '艹', '卧槽', '握草', '沃草', '废物', '白痴', '智障',
-    '神经病', '有病', '脑子有病', '脑子进水', '脑残', '弱智',
-    '混蛋', '王八蛋', '滚蛋', '滚', '去死', '该死', '尼玛', '你妈',
-    '滚开', '垃圾', '辣鸡', '辣鸡', 'cnm', 'nm', 'nmsl', '妈的', '妈逼',
-    '狗屎', '狗屁', '放屁', '屁', '屌', '吊', '叼', '牛逼', '牛批', '🐂', '🐮',
-    'fuck', 'shit', 'bitch', 'asshole', 'bastard', 'damn',
-    'crap', 'piss', 'dick', 'cock', 'cunt', 'faggot', 'bullshit',
-    'dumb', 'idiot', 'stupid', 'moron', 'retard', 'loser',
-    'hell', 'suck', 'sucker', 'gay', 'damn it', 'wtf', 'wth',
-  ];
 
   // 检查留言是否包含辱骂词汇
   const containsBannedWords = (text) => {
@@ -57,7 +35,6 @@ function CommentsPage() {
   };
 
   const handleSubmitComment = () => {
-
     if (newComment.trim() === '') {
       setErrorMessage('留言内容不能为空');
       setShowCommentForm(false);
@@ -93,9 +70,7 @@ function CommentsPage() {
       
       <div className="comments-grid">
         {comments.map((comment, index) => (
-          <div key={index} className="comment-card">
-            <p className="comment-text">{comment}</p>
-          </div>
+          <CommentCard key={index} comment={comment} />
         ))}
       </div>
       
@@ -104,16 +79,12 @@ function CommentsPage() {
       </button>
       
       {showCommentForm && (
-        <div className="overlay">
-          <div className="comment-form-container">
-            <textarea
-              className="comment-input-div"
-              contentEditable
-              onInput={(e) => setNewComment(e.target.textContent)}
-            />
-            <button className="send-button" onClick={handleSubmitComment}></button>
-          </div>
-        </div>
+        <CommentForm 
+          newComment={newComment}
+          setNewComment={setNewComment}
+          handleSubmitComment={handleSubmitComment}
+          handleCancelComment={handleCancelComment}
+        />
       )}
     </div>
   );

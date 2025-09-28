@@ -1,25 +1,24 @@
+import React, { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './HomePage.css';
+import LeftSection from './LeftSection';
+import RightSection from './RightSection';
 
 const HomePage = () => {
   const navigate = useNavigate();
 
-  const handleMartyrsClick = () => {
+  const handleMartyrsClick = useCallback(() => {
     navigate('/martyrs');
-  };
+  }, [navigate]);
 
-  const handleCommentsClick = () => {
+  const handleCommentsClick = useCallback(() => {
     navigate('/comments');
-  };
+  }, [navigate]);
 
   return (
     <div className="home-container">
-      <div className="left-section" onClick={handleMartyrsClick}>
-        <div className="section-content"></div>
-      </div>
-      <div className="right-section" onClick={handleCommentsClick}>
-        <div className="section-content"></div>
-      </div>
+      <LeftSection onClick={handleMartyrsClick} />
+      <RightSection onClick={handleCommentsClick} />
     </div>
   );
 };
